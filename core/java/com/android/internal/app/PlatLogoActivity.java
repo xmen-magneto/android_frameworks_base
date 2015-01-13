@@ -74,7 +74,7 @@ public class PlatLogoActivity extends Activity {
 
         final ImageView logo = new ImageView(this);
         logo.setImageResource(mIsCM
-                ? com.android.internal.R.drawable.cm_platlogo
+                ? com.android.internal.R.drawable.platlogo
                 : com.android.internal.R.drawable.platlogo);
         logo.setPadding(p, 0, p, 0);
         logo.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
@@ -92,7 +92,7 @@ public class PlatLogoActivity extends Activity {
         letter.setGravity(Gravity.CENTER);
         letter.setText(mIsCM ? "CM" : "K");
 
-        String cmVersion = SystemProperties.get("ro.cm.version");
+        String cmVersion = SystemProperties.get("ro.xmod.version");
         if (cmVersion != null) {
             cmVersion = cmVersion.replaceAll("([0-9\\.]+?)-.*", "$1");
         }
